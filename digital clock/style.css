@@ -1,0 +1,69 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #1e2022; /* Dark background */
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.clock {
+    background-color: #0c4a5c; /* Light blue background for the clock */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s; /* Smooth transitions */
+}
+
+.clock:hover {
+    background-color: #0f314d; /* Change to a darker blue on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Glow effect */
+}
+
+h1 {
+    animation: pulsate 2s infinite; /* Animation for the heading */
+}
+
+@keyframes pulsate {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0c4a5c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: antiquewhite;
+    font-weight: 800;
+    
+}
+button:hover {
+    background-color: #0f314d;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
+
+    .clock {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+}
